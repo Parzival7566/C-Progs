@@ -1,0 +1,191 @@
+//YKProg_C_a_ch2
+#include <stdio.h>
+
+int main()
+{
+    int cp,sp;
+    printf("\n Enter the cost price of item : ");
+    scanf("%d",&cp);
+    printf("\n Enter the selling price of item : ");
+    scanf("%d",&sp);
+    if (sp>cp)
+        printf("\n You have incurred a profit of %d",sp-cp);
+    if (cp>sp)
+        printf("\n You have incurred a loss of %d",cp-sp);
+    if (cp==sp)
+    printf("\n No net profit or loss");
+    return 0;
+}
+
+//YKProg_C_b_ch2
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter an integer value : ");
+    scanf("%d",&n);
+    if (n%2==0)
+    printf("\n The given integer is an even number");
+    else
+    printf("\n The given integer is an odd number");
+    return 0;
+}
+
+//YKProg_C_c_ch2
+#include <stdio.h>
+
+int main()
+{
+    int year;
+    printf("\n Enter a year : ");
+    scanf("%d",&year);
+    if (year%4==0)
+    printf("\n The year is a leap year");
+    else
+    printf("\n The year is not a leap year");
+    return 0;
+}
+
+//YKProg_C_e_ch2
+#include <stdio.h>
+int main()
+{
+    int n,f,s,t,fo,fi,nn;
+    printf("Enter a five digit number : ");
+    scanf("%d",&n);
+    f=n%10;
+    s=(n%100)/10;
+    t=(n%1000)/100;
+    fo=(n%10000)/1000;
+    fi=(n%100000)/10000;
+    nn=(f*10000)+(s*1000)+(t*100)+(fo*10)+fi;
+    printf("\n The number %d reversed is : %d",n,nn);
+    if (nn==n)
+    printf("\nThe number is a palindrome");
+    else
+    printf("\nThe number is not a palindrome");
+    return 0;
+}
+
+
+//YKProg_G_b_ch2
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+    printf("\n Enter any character : ");
+    scanf("%c",&ch);
+    if ((ch>=65) && (ch<=90)) printf("\n The character entered is an uppercase alphabet");
+    else if ((ch>=97) && (ch<=122)) printf("\n The character entered is a lowercase alphabet");
+    else if ((ch>=48) && (ch<=57)) printf("\n The character entered is a digit");
+    else printf("\n The character entered is a special symbol");
+    return 0;
+}
+
+//YKProg_G_c_ch2
+#include <stdio.h>
+
+int main()
+{
+    int prem,age,pol;
+    char g,h,l;
+    printf("\n Enter Your Gender [M/F] : ");
+    scanf("%s",&g);
+    printf("\n Enter Your Doctor's Health Diagonosis [Excellent(E)/Poor(P)] : ");
+    scanf("%s",&h);
+    printf("\n Enter Your Area of residence [Rural(R)/Urban(U)] : ");
+    scanf("%s",&l);
+    printf("\n Enter your age :");
+    scanf("%d",&age);
+    printf("\n Enter your policy amount :");
+    scanf("%d",&pol);
+    if (h=='E' && age>=25 && age<=35 && l=='U' && g=='M' && pol<=200000) 
+     printf("\n Your Policy Premium is Rs 4000");
+    else if (h=='E' && age>=25 && age<=35 && l=='U' && g=='F' && pol<=100000) 
+    printf("\n Your Policy Premium is Rs 3000");
+    else if (h=='P' && age>=25 && age<=35 && l=='R' && g=='M' && pol<=10000) 
+    printf("\n Your Policy Premium is Rs 4000");
+    else printf("\n You are not eligible for Policy");
+ return 0;
+}
+    
+//YKProg_G_c_ch2
+#include <stdio.h>
+
+int main()
+{
+    int prem,age,pol;
+    char g,h,l;
+    printf("\n Enter Your Gender [M/F] : ");
+    scanf("%s",&g);
+    printf("\n Enter Your Doctor's Health Diagonosis [Excellent(E)/Poor(P)] : ");
+    scanf("%s",&h);
+    printf("\n Enter Your Area of residence [Rural(R)/Urban(U)] : ");
+    scanf("%s",&l);
+    printf("\n Enter your age :");
+    scanf("%d",&age);
+    printf("\n Enter your policy amount :");
+    scanf("%d",&pol);
+    if (h=='E' && age>=25 && age<=35 && l=='U' && g=='M' && pol<=200000) 
+     printf("\n Your Policy Premium is Rs 4000");
+    else if (h=='E' && age>=25 && age<=35 && l=='U' && g=='F' && pol<=100000) 
+    printf("\n Your Policy Premium is Rs 3000");
+    else if (h=='P' && age>=25 && age<=35 && l=='R' && g=='M' && pol<=10000) 
+    printf("\n Your Policy Premium is Rs 4000");
+    else printf("\n You are not eligible for Policy");
+ return 0;
+}
+
+
+//YKProg_G_c_ch2
+#include <stdio.h>
+
+int main()
+{
+    int prem,age,pol;
+    char g,h,l;
+    printf("\n Enter Your Gender [M/F] : ");
+    scanf("%s",&g);
+    printf("\n Enter Your Doctor's Health Diagonosis [Excellent(E)/Poor(P)] : ");
+    scanf("%s",&h);
+    printf("\n Enter Your Area of residence [Rural(R)/Urban(U)] : ");
+    scanf("%s",&l);
+    printf("\n Enter your age :");
+    scanf("%d",&age);
+    printf("\n Enter your policy amount :");
+    scanf("%d",&pol);
+    if (h=='E' && age>=25 && age<=35 && l=='U' && g=='M' && pol<=200000) 
+     printf("\n Your Policy Premium is Rs 4000");
+    else if (h=='E' && age>=25 && age<=35 && l=='U' && g=='F' && pol<=100000) 
+    printf("\n Your Policy Premium is Rs 3000");
+    else if (h=='P' && age>=25 && age<=35 && l=='R' && g=='M' && pol<=10000) 
+    printf("\n Your Policy Premium is Rs 4000");
+    else printf("\n You are not eligible for Policy");
+ return 0;
+}
+        
+
+//YKProg_G_d_ch2
+#include <stdio.h>
+
+int main()
+{
+    int h,ts;
+    float cc;
+    printf("\n Enter the Hardness Carbon Content and Tensile strength of Steel : ");
+    scanf("%d%f%d",&h,&cc,&ts);
+    if (h>50 && cc<0.7 && ts>5600) printf("The steel is grade 10");
+    else if (h>50 && cc<0.7) printf("The steel is grade 9");
+    else if (cc<0.7 && ts>5600) printf("The steel is grade 8");
+    else if (h>50 && ts>5600) printf("The steel is grade 7");
+    else if (h>50 || cc<0.7 || ts>5600) printf("The steel is grade 6");
+    else printf("The steel is grade 5");
+    return 0;
+}
+
+
+
+
+
