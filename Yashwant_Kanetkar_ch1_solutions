@@ -1,0 +1,161 @@
+//YKProg_a_ch1
+#include <stdio.h>
+int main()
+{
+    int basic,da,hra;
+    printf("\n Enter the basic salary : ");
+    scanf("%d",&basic);
+    da=0.4*basic;
+    hra=0.2*basic;
+    printf("\n The Dearness allowance and House Rent Allowance are %d and %d respectively.",da,hra);
+    printf("\n The gross salary is %d",da+hra+basic);
+    return 0;
+}
+
+//YKProg_b_ch1
+#include <stdio.h>
+int main(){
+    int km,m,cm,f,i;
+    printf("Enter the distance in Kilometers : ");
+    scanf("%d",&km);
+    m=km*1000;
+    f=km*3281;
+    i=km*39370;
+    cm=m*100;
+    printf("\n The distance in metres, feet, inches and centimeters are %d, %d, %d and %d resp.",m,f,i,cm);
+    return 0;
+}
+
+//YKProg_c_ch1
+#include <stdio.h>
+int main()
+{
+    int p,c,m,cs,e,agg;
+    float per;
+    printf("\n Enter your Physics Marks : ");
+    scanf("%d",&p);
+    printf("\n Enter your Chemistry Marks : ");
+    scanf("%d",&c);
+    printf("\n Enter your Mathematics Marks : ");
+    scanf("%d",&m);
+    printf("\n Enter your Computer Science Marks : ");
+    scanf("%d",&cs);
+    printf("\n Enter your English Marks : ");
+    scanf("%d",&e);
+    agg=p+c+m+cs+e;
+    per=(p+c+m+cs+e)/5.00;
+    printf("\n Your Aggregate Marks are : %d",agg);
+    printf("\n Your Percentage is : %.2lf",per);
+    return 0;
+}
+
+//YKProg_d_ch1
+#include <stdio.h>
+
+int main()
+{
+    float f,c;
+    printf("Enter the temperature in farenheit : ");
+    scanf("%e",&f);
+    c=(f-32)*5/9;
+    printf("\n The temperature in celcius is : %.2e",c);
+    return 0;
+}
+
+//YKProg_e_ch1
+#include <stdio.h>
+int area_circle(float x);
+int area_rectangle(int y,int z);
+int main()
+{
+    int l,b,a_r;
+    float r,a_c;
+    a_c=area_circle(r);
+    a_r=area_rectangle(l,b);
+    printf("\n The area of the circle and rectangle are %e and %d resp",a_c,a_r);
+    return 0;
+}
+int area_circle(float x){
+    int a;
+    printf("Enter the value of radius in decimals : ");
+    scanf("%e",&x);
+    a=x*x*3.14;
+    return a;
+}
+
+int area_rectangle(int y, int z){
+    int ar;
+    printf("Enter the value of length of rectangle : ");
+    scanf("%d",&y);
+    printf("Enter the value of breadth of rectangle : ");
+    scanf("%d",&z);
+    ar=y*z;
+    return ar;
+}
+
+//YKProg_f_ch1
+#include <stdio.h>
+
+int main()
+{
+    int C,D,c,d;
+    printf("Enter the value of C : ");
+    scanf("%d",&C);
+    printf("Enter the value of D : ");
+    scanf("%d",&D);
+    c=D;
+    d=C;
+    C=c;
+    D=d;
+    printf("\n The new values of C and D are %d and %d resp",C,D);
+    return 0;
+}
+
+//YKProg_g_ch1
+#include <stdio.h>
+int main()
+{
+    int n,f,s,t,fo,fi,sum;
+    printf("Enter a five digit number : ");
+    scanf("%d",&n);
+    f=n%10;
+    s=(n%100)/10;
+    t=(n%1000)/100;
+    fo=(n%10000)/1000;
+    fi=(n%100000)/10000;
+    sum=f+s+t+fo+fi;
+    printf("\n The sum of the digits in the number %d is %d",n,sum);
+    return 0;
+}
+
+//YK_h_ch1
+#include <stdio.h>
+int main()
+{
+    int n,f,s,t,fo,fi,nn;
+    printf("Enter a five digit number : ");
+    scanf("%d",&n);
+    f=n%10;
+    s=(n%100)/10;
+    t=(n%1000)/100;
+    fo=(n%10000)/1000;
+    fi=(n%100000)/10000;
+    nn=(f*10000)+(s*1000)+(t*100)+(fo*10)+fi;
+    printf("\n The number %d reversed is : %d",n,nn);
+    return 0;
+}
+
+//YK_i_ch1
+#include <stdio.h>
+int main()
+{
+    int n,f,fo,sum;
+    printf("Enter a four digit number : ");
+    scanf("%d",&n);
+    f=n%10;
+    fo=(n%10000)/1000;
+    sum=f+fo;
+    printf("\n The sum of first and fourth digits of the number %d is %d",n,sum);
+    return 0;
+}
+
