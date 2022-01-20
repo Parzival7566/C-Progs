@@ -1,0 +1,272 @@
+//YKProg_C_a_ch3
+#include <stdio.h>
+
+int main()
+{
+    int n,ot,count=1;
+    while (count<=10)
+    {
+        printf("\n Enter the number of hours worked in the week: ");
+        scanf("\n %d",&n);
+        ot=(n-40)*12;
+        if (ot>=0)
+        printf("Your overtime pay is : Rs %d",ot);
+        else printf ("You aren't eligible for overtime pay!");
+    }
+    return 0;
+}
+
+
+//YKProg_C_b_ch3
+#include <stdio.h>
+int main()
+{
+    int n,fact=1,i=1;
+    printf("\n Enter the number for calculating factorial : ");
+    scanf("\n %d",&n);
+    while (i<=n)
+    {
+        fact*=i;
+        i++;
+    }
+    printf("\n The factorial is : %d",fact);
+    return 0;
+}
+
+
+
+//YKProg_C_c_ch3
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n1,n2,po1,po2;
+    char response='y';
+    while (response=='y')
+    {
+        printf("\n Enter the two numbers : ");
+        scanf("\n %d %d",&n1,&n2);
+        po1=pow(n1,n2);
+        po2=pow(n2,n1);
+        printf("\n %d ** %d = %d and %d ** %d = %d",n1,n2,po1,n2,n1,po2);
+        printf("\n Do you wish to continue?y/n : ");
+        scanf("\n %c",&response);
+    }
+    return 0;
+}
+
+
+
+//YKProg_C_d_ch3
+#include <stdio.h>
+int main()
+{
+    int x=0;
+    while(x<=255){
+        printf("\n Ascii value %d corresponds to Character %c",x,x);
+        x++;
+    }
+    return 0;
+}
+
+//YKProg_C_e_ch3
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n=1,n1,n2,n3,s;
+    while(n<=500)
+    {
+    n1=n%10;
+    n2=(n/10)%10;
+    n3=n/100;
+    s=pow(n1,3)+pow(n2,3)+pow(n3,3);
+    if (s==n) printf("\n %d",n);
+    n++;
+    }
+    return 0;
+}
+
+
+
+//YKProg_C_f_ch3
+#include <stdio.h>
+
+int main()
+{
+    printf("Welcome to the 21 matchsticks game!!\n The rules are simple.\n You can pick either 1,2,3 or 4 matchsticks at any instance.");
+    printf("\n After you pick your matchsticks, the computer picks its matchsticks.\n Whoever is forced to pick up the last matchstick loses!");
+    int match_count=21,player;
+    while(match_count>1)
+    {
+        printf("\n Enter the number of matches you want : ");
+        scanf("%d",&player);
+        if (player>4)
+        {
+            printf(" Don't try to cheat!! Pick up either 1,2,3 or 4 matches.");
+            printf("\n Enter the number of matches you want : ");
+            scanf("%d",&player);
+            if (player>4) printf("The computer refuses to play with a cheater like you!");
+            break;
+        }
+        printf(" The computer picked %d matches",5-player);
+        match_count-=5;
+        printf("\n The number of matches left is : %d",match_count);
+        player==0;
+    }
+    printf("\n You have to pick the last match!\n The mighty Computer has WON!!!!!");
+    return 0;
+}
+
+
+
+//YKProg_F_a_ch3
+#include <stdio.h>
+int main()
+{
+    int i,j,n=300;
+    
+    printf("Prime numbers are:-\n");    
+    for(i=2;i<=n;i++)
+    {
+        int c=0;
+        for(j=1;j<=i;j++)
+        {
+            if(i%j==0)
+            {
+                c++;
+            }
+        }
+         
+       if(c==2)
+        {
+            printf("%d ",i);
+        }
+    }
+}
+
+
+
+//YKProg_F_b_ch3
+#include <stdio.h>
+
+int main()
+{
+    int a=65;
+    for (;a>0;) printf("%c",a);
+    return 0;
+}
+
+
+
+//YKProg_F_c_ch3
+#include <stdio.h>
+int factorial(int n)
+{
+    int i;
+    float fact=1.00;
+    for(i=1;i<=n;i++)
+    {
+        fact*=i;
+    }
+    return (fact);
+}
+
+
+int main()
+{
+    int i;
+    float sum=0;
+    for(i=1;i<=7;i++)
+    {
+        sum+=(i/factorial(i));
+        printf("\n The sum is : %f",sum);
+    }
+    
+    return 0;
+}
+
+
+
+
+//YKProg_F_d_ch3
+#include <stdio.h>
+
+int
+main ()
+{
+  int i, s = 65, e = 71,j, count = 1;;
+  while (s != e)
+    {
+      if (e == 71)
+	{
+	  printf ("\n");
+	  for (i = s; i <= e; i++)
+	    printf ("%c", i);
+	  e--;
+	  for (i = e; i >= s; i--)
+	    printf ("%c", i);
+	}
+      else
+	{
+	  printf ("\n");
+	  for (i = s; i <= e; i++)
+	    printf ("%c", i);
+	  for (j = 1; j <= count; j++)
+	    printf (" ");
+	  count += 2;
+	  for (i = e; i >= s; i--)
+	    printf ("%c", i);
+	  e--;
+	}
+    }
+  if (s == e)
+    printf ("\n%c           %c", s, s);
+  return 0;
+}
+
+
+
+//YKProg_F_e_ch3
+#include <stdio.h>
+
+int main()
+{
+    int i,j,k;
+    for (i=1;i<=3;i++)
+    {
+        for(j=1;j<=3;j++)
+        {
+            for(k=1;k<=3;k++)
+            {
+                if (i!=j && j!=k && k!=i)
+                {
+                    printf("\n %d %d %d",i,j,k);
+                }
+            }
+        }
+    }
+    return 0;
+}
+
+
+
+//YKProg_F_f_ch3
+#include <stdio.h>
+int main()
+{
+    int i,y;
+    float x;
+    printf(" i   y   x");
+    for (y=1;y<=6;y++)
+    {
+        for (x=5.5;x<=12.5;x+=0.5)
+        {
+            i=2+(y+0.5*x);
+            printf("\n %d  %d  %f",i,y,x);
+        }
+    }
+    return 0;
+}
+
+
