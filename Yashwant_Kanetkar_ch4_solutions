@@ -1,0 +1,93 @@
+//YKProg_C_h_ch3(new_chap_4)
+#include <stdio.h>
+int main() 
+{
+    int j,i,input,oct[10];
+    printf("Enter the number whose octal equivalent you want to find : ");
+    scanf("%d",&input);
+    for (i=0;input>0;i++)
+    {
+        oct[i]=input%8;
+        input=input/8;
+    }
+    printf("\n Equivalent Octal Number of a Given Number =  ");
+    for(j = i - 1; j >= 0; j--) printf("%d", oct[j]);
+    return 0;
+}
+
+
+
+
+
+//YKProg_C_a_ch4
+#include <stdio.h>
+#include <stdlib.h>
+
+int
+main ()
+{
+  int choice, n = 1;
+  while (n == 1)
+    {
+      printf ("\n1. Factorial");
+      printf ("\n2. Prime");
+      printf ("\n3. Odd/Even");
+      printf ("\n4. Exit");
+      printf ("\nYour Choice? : ");
+      scanf ("%d", &choice);
+
+      switch (choice)
+	{
+	case 2:
+	  {
+	    printf
+	      ("This program will check if a number is prime or composite");
+	    int flag = 0, i, n;
+	    printf ("\n Enter the number : ");
+	    scanf ("%d", &n);
+	    for (i = 2; i < n / 2; i++)
+	      {
+		if (n % i == 0)
+		  {
+		    flag = 1;
+		    break;
+		  }
+	      }
+	    if (flag == 1)
+	      printf ("The number %d is a composite number", n);
+	    else
+	      printf ("The number %d is a prime number", n);
+	  }
+	  break;
+	case 1:
+	  {
+	    int fact = 1, n, sum = 1;
+	    printf ("Enter the number for calculating factorial : ");
+	    scanf ("%d", &n);
+	    while (sum <= n)
+	      {
+		fact *= n;
+		n--;
+	      }
+	    printf ("\nThe factorial is : %d", fact);
+	  }
+	  break;
+	case 3:
+	  {
+	    int a;
+	    printf ("\n Enter an Integer value : ");
+	    scanf ("%d", &a);
+	    if (a % 2 == 0)
+	      printf ("The integer %d is even!", a);
+	    else
+	      printf ("The integer %d is odd!", a);
+	  }
+	  break;
+	case 4:
+	  n = 2;
+	  break;
+	}
+    }
+  return 0;
+}
+
